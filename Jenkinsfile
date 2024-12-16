@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build') {
-            agnet {
+            agent {
                 docker {
                     image 'node:19-alpine'
                     reuseNode true
