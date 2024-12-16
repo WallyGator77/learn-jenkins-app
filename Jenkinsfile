@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh '''
                     echo 'Test stage'
-                    find ./build/ -name "index.html" -exec echo "File exists: {}" \;
+                    find ./build/ -name "index.html" -exec echo "File exists: {}";
                 '''
             }
         }
