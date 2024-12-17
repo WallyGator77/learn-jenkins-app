@@ -30,7 +30,7 @@ pipeline {
                     reuseNode true
                 }
             }
-            
+
             steps {
                 sh '''
                     echo 'Test stage'
@@ -38,6 +38,12 @@ pipeline {
                     npm test
                 '''
             }
+        }
+    }
+
+    post {
+        always {
+            junit 'test-result/junit.xml'
         }
     }
 }
